@@ -1,4 +1,4 @@
-# NexRetail - SaaS 連鎖品牌管理系統
+# Shark Lian Intelligence - SaaS 連鎖品牌管理系統
 
 <div align="center">
   <img src="public/lian.svg" alt="NexRetail Logo" width="80" />
@@ -16,7 +16,9 @@
 
 ## 📖 專案簡介
 
-NexRetail 是一個為連鎖服飾品牌設計的 SaaS 管理系統，包含完整的管理後台 (Dashboard) 與電商前台 (Shop) 功能。
+Shark Lian Intelligence 是一個為連鎖服飾品牌設計的 SaaS 管理系統，包含完整的管理後台 (Dashboard) 與電商前台 (Shop) 功能。
+
+> ⚠️ **注意**：本專案為技術展示網站 (Demo)，所有資料皆為模擬資料，不具備真實交易功能。
 
 ## ✨ 功能特色
 
