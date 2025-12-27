@@ -1,5 +1,5 @@
 import type { Product, Order, User, KpiData, SalesTrend, TopProduct, WeeklyHeat, StockStatus, CheckoutForm, OrderResult, CartItem } from '../../types';
-import { mockProducts, getProductTotalStock, getProductStockStatus } from '../data/products';
+import { mockProducts, getProductStockStatus } from '../data/products';
 import { mockStores } from '../data/stores';
 import { mockOrders, mockKpiData, mockSalesTrend, mockTopProducts, mockWeeklyHeat } from '../data/orders';
 import { mockUsers } from '../data/users';
@@ -93,13 +93,14 @@ export const fetchSalesTrend = async (days: number = 30): Promise<SalesTrend[]> 
 
 // ==================== Analytics API ====================
 
-export const fetchTopProducts = async (storeId?: string): Promise<TopProduct[]> => {
+export const fetchTopProducts = async (_storeId?: string): Promise<TopProduct[]> => {
   await delay(350);
   // 在實際應用中，這裡會根據 storeId 過濾
   return mockTopProducts;
 };
 
-export const fetchWeeklyHeat = async (storeId?: string): Promise<WeeklyHeat[]> => {
+export const fetchWeeklyHeat = async (_storeId?: string): Promise<WeeklyHeat[]> => {
+  
   await delay(300);
   return mockWeeklyHeat;
 };
