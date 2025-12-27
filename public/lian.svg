@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="oceanGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099CC;stop-opacity:1" />
+    </linearGradient>
+    <style type="text/css">
+      .logo-text {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: 2px;
+        fill: #004477;
+      }
+      .secondary-text {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 4px;
+        fill: #0077AA;
+      }
+    </style>
+  </defs>
+
+  <circle cx="200" cy="200" r="180" fill="#f4f9fc" stroke="#e0eef5" stroke-width="2"/>
+
+  <g transform="translate(75, 80) scale(0.8)">
+    <path d="M 250,60 
+             C 220,40 180,30 140,50 
+             C 110,65 90,95 80,130
+             C 75,150 100,160 120,155
+             C 160,145 200,120 220,90
+             L 250,60 Z" 
+             fill="url(#oceanGradient)" />
+             
+    <path d="M 85,140
+             C 70,180 75,230 110,260
+             C 140,285 190,290 230,270
+             C 200,260 160,240 140,200
+             C 130,180 145,160 165,150
+             L 85,140 Z"
+             fill="url(#oceanGradient)" opacity="0.85"/>
+  </g>
+
+  <g transform="translate(200, 320)" text-anchor="middle">
+    <text x="0" y="0" class="logo-text" font-size="36">SHARK</text>
+    <text x="0" y="35" class="secondary-text" font-size="24">LIAN</text>
+  </g>
+</svg>

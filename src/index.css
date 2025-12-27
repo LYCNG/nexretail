@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #FCF0ED;
+  --color-primary-100: #F9E1DB;
+  --color-primary-200: #F3C4B7;
+  --color-primary-300: #ECA693;
+  --color-primary-400: #E6896F;
+  --color-primary-500: #E07A5F;
+  --color-primary-600: #D85A3A;
+  --color-primary-700: #B5452A;
+  --color-primary-800: #8A3520;
+  --color-primary-900: #5F2416;
+  --color-primary: #E07A5F;
+  
+  --color-secondary-50: #F0F6F3;
+  --color-secondary-100: #E1EDE7;
+  --color-secondary-200: #C3DBCF;
+  --color-secondary-300: #A5C9B7;
+  --color-secondary-400: #87B79F;
+  --color-secondary-500: #81B29A;
+  --color-secondary-600: #5E9A7C;
+  --color-secondary-700: #487860;
+  --color-secondary-800: #335644;
+  --color-secondary-900: #1E3428;
+  --color-secondary: #81B29A;
+  
+  --color-accent-50: #FEFBF4;
+  --color-accent-100: #FDF7E9;
+  --color-accent-200: #FAE9C7;
+  --color-accent-300: #F7DBA5;
+  --color-accent-400: #F4CD83;
+  --color-accent-500: #F2CC8F;
+  --color-accent-600: #EDBA5A;
+  --color-accent-700: #E8A825;
+  --color-accent-800: #B98517;
+  --color-accent-900: #84600F;
+  --color-accent: #F2CC8F;
+  
+  --color-surface-light: #FFFFFF;
+  --color-surface-dark: #2D2D2D;
+  
+  --color-background-light: #FAF8F5;
+  --color-background-dark: #1A1A1A;
+  
+  --color-text-primary-light: #3D405B;
+  --color-text-primary-dark: #F4F1DE;
+  --color-text-secondary-light: #6B7280;
+  --color-text-secondary-dark: #9CA3AF;
+  
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  
+  --shadow-warm: 0 4px 14px 0 rgba(224, 122, 95, 0.15);
+  --shadow-warm-lg: 0 10px 25px -3px rgba(224, 122, 95, 0.2);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-family-sans);
+  }
+
+  body {
+    background-color: var(--color-background-light);
+    color: var(--color-text-primary-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  html.dark body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-primary-dark);
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--color-surface-light);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-warm);
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+  
+  html.dark .card {
+    background-color: var(--color-surface-dark);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-warm-lg);
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primary-600);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(to right, var(--color-primary), var(--color-accent), var(--color-secondary));
+  }
+
+  .text-gradient-warm {
+    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .bg-surface-light { background-color: var(--color-surface-light); }
+  .bg-surface-dark { background-color: var(--color-surface-dark); }
+  .bg-background-light { background-color: var(--color-background-light); }
+  .bg-background-dark { background-color: var(--color-background-dark); }
+  
+  .text-text-primary-light { color: var(--color-text-primary-light); }
+  .text-text-primary-dark { color: var(--color-text-primary-dark); }
+  .text-text-secondary-light { color: var(--color-text-secondary-light); }
+  .text-text-secondary-dark { color: var(--color-text-secondary-dark); }
+  
+  .text-primary { color: var(--color-primary); }
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-primary-600 { background-color: var(--color-primary-600); }
+  .text-secondary { color: var(--color-secondary); }
+  .bg-secondary { background-color: var(--color-secondary); }
+  .text-accent { color: var(--color-accent); }
+  .bg-accent { background-color: var(--color-accent); }
+  
+  .shadow-warm { box-shadow: var(--shadow-warm); }
+  .shadow-warm-lg { box-shadow: var(--shadow-warm-lg); }
+}
+
+/* Ant Design 暖色主題覆蓋 */
+:root {
+  --ant-primary-color: #E07A5F;
+  --ant-success-color: #81B29A;
+  --ant-warning-color: #F2CC8F;
+}
+
+/* 滾動條樣式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-background-light);
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background-color: var(--color-background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(224, 122, 95, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(224, 122, 95, 0.5);
+}
